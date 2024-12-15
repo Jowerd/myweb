@@ -1,0 +1,186 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
+    height: 100%; /* საჭირო სტილი, რათა გქონდეს მთლიანი სიმაღლე */
+    display: flex; /* გამოყენებული flexbox */
+    flex-direction: column; /* განლაგება სვეტებად */
+}
+header {
+    background: #005bb5;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* ნავბარი იქნება ვერტიკალურად */
+    }
+
+    .dropdown-content {
+        min-width: 100%; /* მენიუ წაიღებს სრულ სიგანეს */
+    }
+
+    #searchBox {
+        width: 90%; /* მოიცავს უფრო დიდი ფართობს */
+    }
+
+    .job-item {
+        padding: 10px; /* ცოტა ნაკლები padding */
+    }
+}
+
+
+header h1 {
+    margin: 0;
+}
+
+.navbar {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background: #003d80;
+    margin: 0;
+}
+
+.navbar li {
+    margin: 0 15px;
+    position: relative
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: block;
+}
+
+.navbar a:hover {
+    background: #002a5c;
+    border-radius: 5px;
+}
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    border-radius: 8px;
+    margin-top: 1px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    font-size: 15px;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #ddd;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Hover Effect for Dropdown */
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+}
+
+/* Adding smooth animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Applying fadeIn to dropdown-content */
+.dropdown-content {
+    animation: fadeIn 0.3s ease-out;
+}
+
+main {
+    
+    flex-grow: 1; /* შინაარსი ავსებს ყველა ადგილს */
+    padding: 20px;
+}
+/* Button Style for Details */
+.btn-details {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.btn-details:hover {
+    background-color: #45a049;
+    transform: scale(1.05); /* Effect: Enlarges the button */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Effect: Adds shadow */
+}
+
+
+
+#search {
+    margin: 20px 0;
+    text-align: center;
+}
+
+#searchBox {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.job-item {
+    background: #fff;
+    padding: 15px;
+    margin: 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+footer {
+    background: #005bb5;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    }
+
+
+.footer-content {
+    margin: 0;
+}
